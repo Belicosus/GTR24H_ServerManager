@@ -17,19 +17,25 @@ namespace ServerManager.Bll
 
         public PluginDataProvider()
         {
-            //
+            
         }
 
         public void StartListener()
         {
             this.ListenerThread = new Thread(this.ListenerRun);
-
             this.ListenerThread.Start();
         }
 
         private void ListenerRun()
         {
-            
+            //Task.Factory.StartNew(() =>
+            //{
+
+            //});
+
+
+
+
         }
 
     }

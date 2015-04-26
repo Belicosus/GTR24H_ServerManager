@@ -14,7 +14,9 @@
         </DockPanel>
         
         <DockPanel Grid.Column="1">
-            
+            <ListBox Name="lstBoxPlayers">
+                
+            </ListBox>
         </DockPanel>
         
     </Grid>

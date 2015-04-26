@@ -94,6 +94,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServerManager.Bll\ServerManager.Bll.csproj">
+      <Project>{123a5e66-dc92-4a3f-b01c-db63ea918bed}</Project>
+      <Name>ServerManager.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerManager.Model\ServerManager.Model.csproj">
+      <Project>{c8ddb228-4447-46f1-b363-9fc5b231b8c0}</Project>
+      <Name>ServerManager.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

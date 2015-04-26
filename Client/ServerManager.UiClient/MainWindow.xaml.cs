@@ -23,6 +23,11 @@ namespace ServerManager.UiClient
         public MainWindow()
         {
             InitializeComponent();
+
+
+            //Initialize reading thread:
+
+
         }
     }
 }
