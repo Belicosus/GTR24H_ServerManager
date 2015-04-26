@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectionProvider.cs" />
+    <Compile Include="ConsoleManager.cs" />
+    <Compile Include="NewDataEventArgs.cs" />
     <Compile Include="PluginDataProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
