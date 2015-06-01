@@ -37,7 +37,6 @@ namespace ServerManager.UiClient
             this._pluginDataProvider.NewDataEvent += this.NewDataEventHandler;
             this._pluginDataProvider.StartListener();
             
-            
             this.Closing += this.WindowClosingEventHandler;
         }
 
