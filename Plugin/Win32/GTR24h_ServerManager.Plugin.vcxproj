@@ -11,7 +11,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>InternalsPlugin</ProjectName>
     <ProjectGuid>{D0C09F9B-E1D6-4A04-B698-190F52BBA156}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -60,7 +59,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\Release/InternalsPlugin.tlb</TypeLibraryName>
+      <TypeLibraryName>.\Release/GTR24h_ServerManager.Plugin.tlb</TypeLibraryName>
       <HeaderFileName />
     </Midl>
     <ClCompile>
@@ -71,7 +70,7 @@
       <StringPooling>true</StringPooling>
       <StructMemberAlignment>4Bytes</StructMemberAlignment>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\Release/InternalsPlugin.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>.\Release/GTR24h_ServerManager.Plugin.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
       <ObjectFileName>.\Release/</ObjectFileName>
       <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
@@ -84,14 +83,14 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>.\Release/InternalsPlugin.dll</OutputFile>
+      <OutputFile>.\Release/GTR24h_ServerManager.Plugin.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ImportLibrary>.\Release/InternalsPlugin.lib</ImportLibrary>
+      <ImportLibrary>.\Release/GTR24h_ServerManager.Plugin.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\Release/InternalsPlugin.bsc</OutputFile>
+      <OutputFile>.\Release/GTR24h_ServerManager.Plugin.bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
       <Command />
@@ -103,7 +102,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\Debug/InternalsPlugin.tlb</TypeLibraryName>
+      <TypeLibraryName>.\Debug/GTR24h_ServerManager.Plugin.tlb</TypeLibraryName>
       <HeaderFileName />
     </Midl>
     <ClCompile>
@@ -114,7 +113,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <StructMemberAlignment>4Bytes</StructMemberAlignment>
-      <PrecompiledHeaderOutputFile>.\Debug/GTR24H_ServerManager.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>.\Debug/GTR24h_ServerManager.Plugin.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
       <ObjectFileName>.\Debug/</ObjectFileName>
       <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
@@ -128,16 +127,16 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>.\Debug/GTR24H_ServerManager.dll</OutputFile>
+      <OutputFile>.\Debug/GTR24h_ServerManager.Plugin.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\Debug/GTR24H_ServerManager.pdb</ProgramDatabaseFile>
-      <ImportLibrary>.\Debug/GTR24H_ServerManager.lib</ImportLibrary>
+      <ProgramDatabaseFile>.\Debug/GTR24h_ServerManager.Plugin.pdb</ProgramDatabaseFile>
+      <ImportLibrary>.\Debug/GTR24h_ServerManager.Plugin.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\Debug/InternalsPlugin.bsc</OutputFile>
+      <OutputFile>.\Debug/GTR24h_ServerManager.Plugin.bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
       <Command />
@@ -148,7 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Include\Example.hpp" />
-    <ClInclude Include="..\Include\InternalsPlugin.hpp" />
+    <ClInclude Include="..\Include\GTR24h_ServerManager.Plugin.hpp" />
     <ClInclude Include="..\Include\PluginObjects.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

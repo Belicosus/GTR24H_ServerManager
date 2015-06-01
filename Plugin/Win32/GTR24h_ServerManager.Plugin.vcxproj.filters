@@ -2,15 +2,15 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{742ca4ed-09a4-4aae-9a99-f846b689d7f1}</UniqueIdentifier>
+      <UniqueIdentifier>{2d8c5723-5f39-4e8d-828d-c486e6bdef98}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{3790a55d-280e-4254-9a4f-adc719d27a55}</UniqueIdentifier>
+      <UniqueIdentifier>{ccba65a2-1c78-4ebf-90f4-d9c219f359a0}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl</Extensions>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{10edab40-e7be-4a04-bed3-d6403308e4a0}</UniqueIdentifier>
+      <UniqueIdentifier>{931988a1-a168-4f05-b94d-d555a4d28077}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
   </ItemGroup>
@@ -23,7 +23,7 @@
     <ClInclude Include="..\Include\Example.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Include\InternalsPlugin.hpp">
+    <ClInclude Include="..\Include\GTR24h_ServerManager.Plugin.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Include\PluginObjects.hpp">

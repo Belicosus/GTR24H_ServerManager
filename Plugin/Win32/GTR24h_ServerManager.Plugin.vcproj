@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="InternalsPlugin"
+	Name="GTR24h_ServerManager.Plugin"
 	ProjectGUID="{D0C09F9B-E1D6-4A04-B698-190F52BBA156}"
 	>
 	<Platforms>
@@ -41,7 +41,7 @@
 				MkTypLibCompatible="true"
 				SuppressStartupBanner="true"
 				TargetEnvironment="1"
-				TypeLibraryName=".\Release/InternalsPlugin.tlb"
+				TypeLibraryName=".\Release/GTR24h_ServerManager.Plugin.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
@@ -53,7 +53,7 @@
 				StringPooling="true"
 				StructMemberAlignment="3"
 				EnableFunctionLevelLinking="true"
-				PrecompiledHeaderFile=".\Release/InternalsPlugin.pch"
+				PrecompiledHeaderFile=".\Release/GTR24h_ServerManager.Plugin.pch"
 				AssemblerListingLocation=".\Release/"
 				ObjectFile=".\Release/"
 				ProgramDataBaseFileName=".\Release/"
@@ -74,11 +74,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\Release/InternalsPlugin.dll"
+				OutputFile=".\Release/GTR24h_ServerManager.Plugin.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
 				GenerateManifest="false"
-				ImportLibrary=".\Release/InternalsPlugin.lib"
+				ImportLibrary=".\Release/GTR24h_ServerManager.Plugin.lib"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -93,7 +93,7 @@
 			<Tool
 				Name="VCBscMakeTool"
 				SuppressStartupBanner="true"
-				OutputFile=".\Release/InternalsPlugin.bsc"
+				OutputFile=".\Release/GTR24h_ServerManager.Plugin.bsc"
 			/>
 			<Tool
 				Name="VCFxCopTool"
@@ -137,7 +137,7 @@
 				MkTypLibCompatible="true"
 				SuppressStartupBanner="true"
 				TargetEnvironment="1"
-				TypeLibraryName=".\Debug/InternalsPlugin.tlb"
+				TypeLibraryName=".\Debug/GTR24h_ServerManager.Plugin.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
@@ -149,7 +149,7 @@
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="0"
 				StructMemberAlignment="3"
-				PrecompiledHeaderFile=".\Debug/InternalsPlugin.pch"
+				PrecompiledHeaderFile=".\Debug/GTR24h_ServerManager.Plugin.pch"
 				AssemblerListingLocation=".\Debug/"
 				ObjectFile=".\Debug/"
 				ProgramDataBaseFileName=".\Debug/"
@@ -171,13 +171,13 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\Debug/InternalsPlugin.dll"
+				OutputFile=".\Debug/GTR24h_ServerManager.Plugin.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
 				GenerateManifest="false"
 				GenerateDebugInformation="true"
-				ProgramDatabaseFile=".\Debug/InternalsPlugin.pdb"
-				ImportLibrary=".\Debug/InternalsPlugin.lib"
+				ProgramDatabaseFile=".\Debug/GTR24h_ServerManager.Plugin.pdb"
+				ImportLibrary=".\Debug/GTR24h_ServerManager.Plugin.lib"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -192,7 +192,7 @@
 			<Tool
 				Name="VCBscMakeTool"
 				SuppressStartupBanner="true"
-				OutputFile=".\Debug/InternalsPlugin.bsc"
+				OutputFile=".\Debug/GTR24h_ServerManager.Plugin.bsc"
 			/>
 			<Tool
 				Name="VCFxCopTool"
@@ -248,7 +248,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\Include\InternalsPlugin.hpp"
+				RelativePath="..\Include\GTR24h_ServerManager.Plugin.hpp"
 				>
 			</File>
 			<File

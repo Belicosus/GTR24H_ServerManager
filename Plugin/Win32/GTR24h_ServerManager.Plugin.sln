@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InternalsPlugin", "GTR24h_ServerManager.Plugin.vcxproj", "{D0C09F9B-E1D6-4A04-B698-190F52BBA156}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GTR24h_ServerManager.Plugin", "GTR24h_ServerManager.Plugin.vcxproj", "{D0C09F9B-E1D6-4A04-B698-190F52BBA156}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
