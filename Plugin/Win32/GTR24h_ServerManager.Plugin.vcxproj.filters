@@ -23,10 +23,10 @@
     <ClInclude Include="..\Include\Example.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Include\GTR24h_ServerManager.Plugin.hpp">
+    <ClInclude Include="..\Include\PluginObjects.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Include\PluginObjects.hpp">
+    <ClInclude Include="..\Include\InternalsPlugin.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
