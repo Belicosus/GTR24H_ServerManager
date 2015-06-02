@@ -26,30 +26,25 @@
 class ExampleInternalsPlugin : public InternalsPluginV01
 {
 
- public:
+public:
 
-  // Constructor/destructor
-  ExampleInternalsPlugin() {}
-  ~ExampleInternalsPlugin() {}
+	// Constructor/destructor
+	ExampleInternalsPlugin() {}
+	~ExampleInternalsPlugin() {}
 
-  // These are the functions derived from base class InternalsPlugin
-  // that can be implemented.
-  void Startup( long version );  // game startup
-  void Shutdown();               // game shutdown
+	// These are the functions derived from base class InternalsPlugin
+	// that can be implemented.
+	void Startup(long version);  // game startup
+	void Shutdown();               // game shutdown
 
-  void StartSession();           // session has started
-  void EndSession();             // session has ended
+	void StartSession();           // session has started
+	void EndSession();             // session has ended
 
-  // SCORING OUTPUT
-  bool WantsScoringUpdates() { return( true ); } // CHANGE TO TRUE TO ENABLE SCORING EXAMPLE!
-  void UpdateScoring( const ScoringInfoV01 &info );
-
- private:
-
-  void WriteToAllExampleOutputFiles( const char * const openStr, const char * const msg );
+	// SCORING OUTPUT
+	bool WantsScoringUpdates() { return(true); }
+	void UpdateScoring(const ScoringInfoV01 &info);
 
 };
 
 
 #endif // _INTERNALS_EXAMPLE_H
-
