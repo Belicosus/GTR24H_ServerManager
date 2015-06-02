@@ -43,32 +43,15 @@ class ExampleInternalsPlugin : public InternalsPluginV01
   void StartSession();           // session has started
   void EndSession();             // session has ended
 
-  // GAME OUTPUT
-  long WantsTelemetryUpdates() { return( 0 ); } // CHANGE TO 1 TO ENABLE TELEMETRY EXAMPLE!
-  void UpdateTelemetry( const TelemInfoV01 &info );
-
-  bool WantsGraphicsUpdates() { return( false ); } // CHANGE TO TRUE TO ENABLE GRAPHICS EXAMPLE!
-  void UpdateGraphics( const GraphicsInfoV01 &info );
-
   // GAME INPUT
   bool HasHardwareInputs() { return( false ); } // CHANGE TO TRUE TO ENABLE HARDWARE EXAMPLE!
   void UpdateHardware( const float fDT ) { mET += fDT; } // update the hardware with the time between frames
   void EnableHardware() { mEnabled = true; }             // message from game to enable hardware
   void DisableHardware() { mEnabled = false; }           // message from game to disable hardware
 
-  // See if the plugin wants to take over a hardware control.  If the plugin takes over the
-  // control, this method returns true and sets the value of the float pointed to by the
-  // second arg.  Otherwise, it returns false and leaves the float unmodified.
-  bool CheckHWControl( const char * const controlName, float &fRetVal );
-
-  bool ForceFeedback( float &forceValue );  // SEE FUNCTION BODY TO ENABLE FORCE EXAMPLE
-
   // SCORING OUTPUT
   bool WantsScoringUpdates() { return( true ); } // CHANGE TO TRUE TO ENABLE SCORING EXAMPLE!
   void UpdateScoring( const ScoringInfoV01 &info );
-
-  // COMMENTARY INPUT
-  bool RequestCommentary( CommentaryRequestInfoV01 &info );  // SEE FUNCTION BODY TO ENABLE COMMENTARY EXAMPLE
 
   // VIDEO EXPORT (sorry, no example code at this time)
   virtual bool WantsVideoOutput() { return( false ); }         // whether we want to export video
