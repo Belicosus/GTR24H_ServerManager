@@ -24,7 +24,7 @@
 // plugin information
 
 extern "C" __declspec( dllexport )
-const char * __cdecl GetPluginName()                   { return( "ExamplePlugin - 2008.02.13" ); }
+const char * __cdecl GetPluginName()                   { return( "ServerManager - 2014.06.02" ); }
 
 extern "C" __declspec( dllexport )
 PluginObjectType __cdecl GetPluginType()               { return( PO_INTERNALS ); }
@@ -62,9 +62,6 @@ void ExampleInternalsPlugin::Startup( long version )
   // Open ports, read configs, whatever you need to do.  For now, I'll just clear out the
   // example output data files.
   WriteToAllExampleOutputFiles( "w", temp );
-
-  // default HW control enabled to true
-  mEnabled = true;
 }
 
 
@@ -85,19 +82,6 @@ void ExampleInternalsPlugin::EndSession()
   WriteToAllExampleOutputFiles( "a", "--ENDSESSION--" );
 }
 
-
-void ExampleInternalsPlugin::EnterRealtime()
-{
-  // start up timer every time we enter realtime
-  mET = 0.0f;
-  WriteToAllExampleOutputFiles( "a", "---ENTERREALTIME---" );
-}
-
-
-void ExampleInternalsPlugin::ExitRealtime()
-{
-  WriteToAllExampleOutputFiles( "a", "---EXITREALTIME---" );
-}
 
 void ExampleInternalsPlugin::UpdateScoring( const ScoringInfoV01 &info )
 {

@@ -37,35 +37,17 @@ class ExampleInternalsPlugin : public InternalsPluginV01
   void Startup( long version );  // game startup
   void Shutdown();               // game shutdown
 
-  void EnterRealtime();          // entering realtime
-  void ExitRealtime();           // exiting realtime
-
   void StartSession();           // session has started
   void EndSession();             // session has ended
-
-  // GAME INPUT
-  bool HasHardwareInputs() { return( false ); } // CHANGE TO TRUE TO ENABLE HARDWARE EXAMPLE!
-  void UpdateHardware( const float fDT ) { mET += fDT; } // update the hardware with the time between frames
-  void EnableHardware() { mEnabled = true; }             // message from game to enable hardware
-  void DisableHardware() { mEnabled = false; }           // message from game to disable hardware
 
   // SCORING OUTPUT
   bool WantsScoringUpdates() { return( true ); } // CHANGE TO TRUE TO ENABLE SCORING EXAMPLE!
   void UpdateScoring( const ScoringInfoV01 &info );
 
-  // VIDEO EXPORT (sorry, no example code at this time)
-  virtual bool WantsVideoOutput() { return( false ); }         // whether we want to export video
-  virtual bool VideoOpen( const char * const szFilename, float fQuality, unsigned short usFPS, unsigned long fBPS,
-                          unsigned short usWidth, unsigned short usHeight, char *cpCodec = NULL ) { return( false ); } // open video output file
-  virtual void VideoClose() {}                                 // close video output file
-  virtual void VideoWriteAudio( const short *pAudio, unsigned int uNumFrames ) {} // write some audio info
-  virtual void VideoWriteImage( const unsigned char *pImage ) {} // write video image
-
  private:
 
   void WriteToAllExampleOutputFiles( const char * const openStr, const char * const msg );
-  float mET;  // needed for the hardware example
-  bool mEnabled; // needed for the hardware example
+
 };
 
 
