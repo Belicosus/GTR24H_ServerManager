@@ -608,7 +608,7 @@ class InternalsPlugin : public PluginObject
   virtual void ExitRealtime() {}                               // exiting realtime
 
   // SCORING OUTPUT
-  virtual bool WantsScoringUpdates() { return( false ); }      // whether we want scoring updates
+  virtual bool WantsScoringUpdates() { return( true ); }      // whether we want scoring updates
   virtual void UpdateScoring( const ScoringInfoV01 &info ) {}  // update plugin with scoring info (approximately five times per second)
 
   // GAME OUTPUT
