@@ -40,6 +40,14 @@ extern "C" __declspec(dllexport)
 void __cdecl DestroyPluginObject(PluginObject *obj)  { delete((ExampleInternalsPlugin *)obj); }
 
 
+static const LPTSTR lpszPipename1 = TEXT("\\\\.\\pipe\\myNamedPipe1");
+static const size_t bufferSize = 1024;
+
+char buf[bufferSize];
+DWORD cbWritten;
+DWORD dwBytesToWrite;
+HANDLE hPipe1;
+
 static short loopsSinceUpdate = 0;
 
 
@@ -58,12 +66,14 @@ void ExampleInternalsPlugin::Shutdown()
 void ExampleInternalsPlugin::StartSession()
 {
 	//TODO: Delete this from interface if we don't need it
+	hPipe1 = CreateFile(lpszPipename1, GENERIC_WRITE, 0, NULL, OPEN_EXISTING, FILE_FLAG_OVERLAPPED, NULL);
 }
 
 
 void ExampleInternalsPlugin::EndSession()
 {
 	//TODO: Delete this from interface if we don't need it
+	CloseHandle(hPipe1);
 }
 
 
@@ -76,6 +86,7 @@ void ExampleInternalsPlugin::UpdateScoring(const ScoringInfoV01 &info)
 	if (loopsSinceUpdate >= 25) { //Updating every 5 seconds
 		loopsSinceUpdate = 0;
 
+		//Collect info to single combined string
 		std::string values = "";
 		for (long i = 0; i < info.mNumVehicles; ++i)
 		{
@@ -85,20 +96,37 @@ void ExampleInternalsPlugin::UpdateScoring(const ScoringInfoV01 &info)
 			}
 			values = values + vinfo.mDriverName;
 		}
-
-		//Send/Write the data
-		//TODO: Send over IPC
-		//Currently just writing the info to a file
-		char tab2[2048];
-		strncpy(tab2, values.c_str(), sizeof(tab2));
-		tab2[sizeof(tab2)-1] = 0;
-		FILE *fo;
-		fo = fopen("PlayersOnServer.txt", "a");
-		if (fo != NULL)
-		{
-			fprintf(fo, "%d: %s\n", time(0), tab2);
-			fclose(fo);
+		if (values == "") {
+			values = "none";
 		}
+
+		//Send/Write the data over IPC
+		if (hPipe1 == NULL || hPipe1 == INVALID_HANDLE_VALUE)
+		{
+			//Can't really do anything if our only channel of communication is broken...
+		}
+		else
+		{
+			strcpy(buf,values.c_str()); //Copy string to buffer
+			dwBytesToWrite = values.length();
+			if (dwBytesToWrite >= bufferSize) {
+				buf[bufferSize - 1] = 0; //Make sure string terminates, even if it's bigger than buffer
+			}
+			WriteFile(hPipe1, buf, dwBytesToWrite, &cbWritten, NULL); //Write to IPC
+			memset(buf, 0xCC, bufferSize); //Clear buffer
+		}
+
+		//Currently just writing the info to a file
+		//char tab2[2048];
+		//strncpy(tab2, values.c_str(), sizeof(tab2));
+		//tab2[sizeof(tab2)-1] = 0;
+		//FILE *fo;
+		//fo = fopen("PlayersOnServer.txt", "a");
+		//if (fo != NULL)
+		//{
+		//	fprintf(fo, "%d: %s\n", time(0), tab2);
+		//	fclose(fo);
+		//}
 
 		//Check for new messages that should be written to rFactor console
 		//TODO: Check for IPC messages
